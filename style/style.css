@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+}
+
+:root{
+	--cyan-color : hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+	--karla: "Karla";
+	--light-weight: 400;
+	--heavey-weight: 700;
+}
+
+body{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: hsl(44, 119%, 96%);
+}
+
+.container{
+	width: 700px;
+	height: 70vh;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	background-color: white;
+}
+
+.lead{
+	color: var(--light-gray);
+}
+/* Start Header Section Box*/
+.component_header_section{
+	/*grid-area: header;*/
+	background-color: white;
+	font-family: var(--karla), "Sans-serif";
+	padding: 2.2rem 2.2rem 2.5rem 2.5rem;
+	/*height: 2rem;*/
+	width: 100%;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+}
+
+.component_header_section .component_box_title{
+	font-size: 1.2rem;
+	color:var(--cyan-color);
+}
+
+
+.component_header_section .component_box_subtitle{
+	font-size: 1rem;
+	margin:1.2rem 0 0.8rem 0;
+	color: var(--bright-yellow);
+
+}
+
+.component_header_section .component_box_text{
+	color: var(--grayish-blue);
+	font-size: 0.9rem;
+	font-weight: var(--heavey-weight);
+}
+
+/*End Header Section*/
+
+/*=====================*/
+
+/*Start Price Section*/
+.component_price_section{
+	/*grid-area: price;*/
+	background-color: var(--cyan-color);
+	color:white;
+	font-family: var(--karla);
+	width: calc(50% - 4rem);
+	padding: 2rem 1.6rem 1.4rem 2.4rem;
+	border-bottom-left-radius: 10px;
+}
+
+.component_price_section .component_box_subtitle{
+	color:white;
+	margin:1.1rem 0;
+	font-family: inherit;
+	font-weight: var(--light-weight);
+}
+
+
+.component_price_section .component_box_price{
+	font-size: 2em;
+	font-weight: var(--heavey-weight);
+	font-family: inherit;
+}
+
+.component_price_section .component_box_text{
+	margin: 0.9rem 0 0 0 ;
+	font-size: 0.8rem;
+	color: var(--light-gray);
+}
+
+
+.component_price_section .component_box_button{
+	background-color:var(--bright-yellow);
+	color:var(--light-gray);
+	border:none;
+	border-radius: 5px;
+	padding: 0.7rem 4.1rem;
+	margin: 2rem 0 0 0;
+	transition: 0.4s ease-out background-color;
+	box-shadow: 2px 2px 5px rgba(0,0, 0, 0.19);
+	font-family: inherit;
+	font-weight: var(--heavey-weight);
+	cursor: pointer;
+	font-size:0.92rem;
+}
+
+.component_price_section .component_box_button:hover{
+	background-color: var(--light-gray);
+	color:var(--grayish-blue);
+	transition: 0.6s ease background-color, 0.6s ease color;
+	/*transition: 0.6s ease color;*/
+	cursor: pointer;
+	font-family: inherit;
+	/*font-weight: var(--light-weight)*/
+}
+
+/*End Price Section*/
+
+/*=====================*/
+
+/*Start Why section*/
+.component_why_section{
+	/*grid-area: why-section;*/
+	background-color: hsl(179deg 55% 49%);
+	color: white;
+	width: calc(50% - 3rem);
+	padding: 2rem 1.1rem 1.4rem 1.9rem;
+	font-family: var(--karla);
+	border-bottom-right-radius: 10px;
+
+}
+
+.component_why_section .component_box_subtitle{
+	margin:1.1rem 0;
+	font-family: inherit;
+}
+
+
+.component_why_section ul {
+	list-style-type: none;
+}
+
+.component_why_section ul li{
+	color: var(--light-gray);
+	font-size: 0.9rem;
+}
+
+/*End Why section*/
+
+
+
+/* Make it responsive over Many screens */
+
+/* Less than 1017px */
+@media screen and (max-width: 1017px){
+	.component_price_section .lead{
+		font-size: 0.8rem
+	}
+	.component_price_section .component_box_button{
+		padding: 0.6rem 2.8rem;
+		font-size: 0.8rem
+	}
+}
+
+
+/* Less than 824px */
+@media screen and (max-width: 824px){
+	.component_price_section .component_box_button{
+		padding: 0.6rem 2.5rem;
+		font-size: 0.8rem
+	}
+}
+
+
+/* Less than 785px */
+@media screen and (max-width: 785px){
+	.component_price_section .component_box_button{
+		padding: 0.6rem 2.2rem;
+		font-size: 0.8rem
+	}
+}
+
+
+/* Less than 750px */
+@media screen and (max-width: 750px){
+	.container{
+		width: 350px;
+		height:auto;
+
+	}
+
+	.component_header_section{
+		width: 100%;
+	}
+	.component_price_section{
+		width: 100%;
+		border-radius: 0;
+	}
+	.component_why_section{
+		width: 100%;
+		border-bottom: 10px;
+	}
+}
+
+/* Less than 550px */
+@media screen and (max-width: 550px){
+	.container{
+		width: 50%;
+		height: 100%;
+	}
+
+	.component_header_section{
+		width: 100%;
+	}
+
+	.component_price_section{
+		width: 100%;
+	}
+
+	.component_why_section{
+		width: 100%;
+	}
+
+}
